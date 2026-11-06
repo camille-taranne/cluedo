@@ -24,3 +24,5 @@ forcé de bouger apres avoir fais une hypothese
 fin : affiche combi correct, nb hypothese, nb pieces visités, boutton pour recommencer
 
 pages neccessaires : accueil, 1/piece, hypothese, fin
+
+dbeaver pour .db
