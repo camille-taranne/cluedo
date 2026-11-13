@@ -11,4 +11,4 @@
     </body>
     <nav>
         <a= href="index.php?page=jeu">Jouer</a>
-</nav>
+    </nav>

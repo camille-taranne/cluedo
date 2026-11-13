@@ -26,6 +26,10 @@
     if ($_GET["page"] == "fin") {
     include "pages/fin.php";
     }
+
+
+
+    $sqlite -> close();	
     ?>
 
 </html>
