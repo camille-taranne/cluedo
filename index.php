@@ -6,14 +6,6 @@
         <title>CLUEDO</title>
     </head>
     <?php
-    $bdd_fichier = 'cluedo.db';		//Fichier de la base de données
-	$piece = 'Hall';				//Pièce à utiliser
-	
-
-	$sqlite = new SQLite3($bdd_fichier);		//On ouvre le fichier de la base de données
-
-
-
     if ($_GET["page"] == "accueil") {
     include "pages/accueil.php";
     }
@@ -26,6 +18,17 @@
     if ($_GET["page"] == "fin") {
     include "pages/fin.php";
     }
+
+
+    $bdd_fichier = 'cluedo.db';		//Fichier de la base de données
+	$piece = 'Hall';				//Pièce à utiliser
+	
+
+	$sqlite = new SQLite3($bdd_fichier);		//On ouvre le fichier de la base de données
+
+
+
+    
 
 
 
