@@ -76,4 +76,7 @@
     
     
     ?>
+    <nav>
+        <a= href="index.php?page=hypo">Hypothèse</a>
+    </nav>
 </html>

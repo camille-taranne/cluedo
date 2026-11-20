@@ -5,3 +5,12 @@
     <head>
         <title>HYPOTHESE</title>
     </head>
+
+
+
+
+
+    <nav>
+        <a= href="index.php?page=jeu">revenir en jeu</a>
+    </nav>
+</html>
