@@ -6,7 +6,7 @@
         <title>JEU</title>
     </head>
     <?php
-    $piece = "hall";
+    
     
     if ($_GET["piece"] == "hall") {
     echo "<img src=\"./img/hall.png\" alt=\"hall\" >";
@@ -34,8 +34,8 @@
     }
     
 
-    $bdd_fichier = 'cluedo.db';		//Fichier de la base de données
-	
+    $bdd_fichier = '../cluedo.db';		//Fichier de la base de données
+    $piece = "hall";
 
 	$sqlite = new SQLite3($bdd_fichier);		//On ouvre le fichier de la base de données
 	
@@ -43,11 +43,15 @@
 	$sql = 'SELECT adj.id_piece, adj.nom_piece ';
 	$sql .= 'FROM pieces INNER JOIN portes ON portes.id_piece1=pieces.id_piece OR portes.id_piece2=pieces.id_piece ';
 	$sql .= 'INNER JOIN pieces AS adj ON portes.id_piece1=adj.id_piece OR portes.id_piece2=adj.id_piece ';
-	$sql .= 'WHERE adj.id_piece!=pieces.id_piece AND pieces.nom_piece LIKE :piece';
+	$sql .= 'WHERE adj.id_piece!=pieces.id_piece AND pieces.nom_piece LIKE :piece ;';
+
+
 	
 	
 	/* Préparation de la requete et de ses paramètres */
 	$requete = $sqlite -> prepare($sql);	
+    var_dump($requete);
+    
 	$requete -> bindValue(':piece', $piece, SQLITE3_TEXT);
 	
 	$result = $requete -> execute();	//Execution de la requête et récupération du résultat
