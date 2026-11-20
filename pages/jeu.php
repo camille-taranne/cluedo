@@ -6,7 +6,7 @@
         <title>JEU</title>
     </head>
     <?php
-    
+    $piece = "hall";
     
     if ($_GET["piece"] == "hall") {
     echo "<img src=\"./img/hall.png\" alt=\"hall\" >";
