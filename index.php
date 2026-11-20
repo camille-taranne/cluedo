@@ -18,6 +18,9 @@
     if ($_GET["page"] == "fin") {
     include "pages/fin.php";
     }
+    else{
+    include "pages/accueil.php";
+    }
 
 
     $bdd_fichier = 'cluedo.db';		//Fichier de la base de données
